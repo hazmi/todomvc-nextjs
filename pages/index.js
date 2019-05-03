@@ -1,5 +1,3 @@
-function Home() {
-  return <div>Welcome to Next.js!</div>
-}
+import { Todos } from '../components/todos';
 
-export default Home
+export default () =>  <Todos />;
