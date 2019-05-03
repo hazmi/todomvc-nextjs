@@ -5,19 +5,19 @@ import "./index.scss";
 export const Filters = ({ filterActive }) => (
   <ul className="filters">
     <FilterItem
-      to="#/"
+      to="/"
       selected={(filterActive === 'all')}
     >
       All
     </FilterItem>
     <FilterItem
-      to="#/active"
+      to="/active"
       selected={(filterActive === 'active')}
     >
       Active
     </FilterItem>
     <FilterItem
-      to="#/completed"
+      to="/completed"
       selected={(filterActive === 'completed')}
     >
       Completed

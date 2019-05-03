@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import "./index.scss";
 
 export const FilterItem = ({
@@ -7,9 +8,9 @@ export const FilterItem = ({
   to
 }) => (
   <li className="filter-item">
-    <a href={to} className={selected ? 'selected' : ''}>
-      {children}
-    </a>
+    <Link href={to}>
+      <a className={selected ? 'selected' : ''}>{children}</a>
+    </Link>
   </li>
 );
 

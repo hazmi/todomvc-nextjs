@@ -5,9 +5,10 @@ import { Footer } from './components/footer';
 import { reducer } from './reducer';
 import "./index.scss";
 
-export const Todos = () => {
+export const Todos = ({
+  filterActive = "all"
+}) => {
   const [todos, dispatch] = useReducer(reducer, []);
-  const [filterActive, setFilterActive] = useState('all');
 
   const addTodo = (value) => {
     dispatch({
