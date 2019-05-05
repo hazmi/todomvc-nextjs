@@ -1,3 +1,12 @@
+import {connect} from "react-redux";
 import { Todos } from '../components/todos';
 
-export default () =>  <Todos filterActive="active" />;
+const Active = ({ todos, dispatch }) =>  (
+  <Todos
+    todos={todos}
+    dispatch={dispatch}
+    filterActive="active"
+  />
+);
+
+export default connect(state => state)(Active);

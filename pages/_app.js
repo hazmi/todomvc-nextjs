@@ -1,11 +1,14 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head'
+import {Provider} from "react-redux";
+import withRedux from "next-redux-wrapper";
+import { store } from "../lib/store";
 import { Footer } from '../components/footer';
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, store } = this.props;
 
     return (
       <Container>
@@ -13,7 +16,9 @@ class MyApp extends App {
           <title>TodoMVC</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
         <Footer />
         <style jsx global>{`
           html,
@@ -60,4 +65,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default withRedux(store)(MyApp);

@@ -1,14 +1,14 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import React  from 'react';
 import { Header } from './components/header';
 import { Main } from './components/main';
 import { Footer } from './components/footer';
-import { reducer } from './reducer';
 import "./index.scss";
 
 export const Todos = ({
-  filterActive = "all"
+  filterActive = "all",
+  todos = [],
+  dispatch
 }) => {
-  const [todos, dispatch] = useReducer(reducer, []);
 
   const addTodo = (value) => {
     dispatch({
