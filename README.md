@@ -14,3 +14,6 @@ Deployed using Zeit’s [Now](https://zeit.co/now).
 * **SSR (Server Side Rendering)**. See the view source to confirm the initial todos are rendered in server. Rendered faster, good for SEO.
 * [**SASS**](https://sass-lang.com/), A CSS library. Allow me to nested styles, make it easier to write [BEM](http://getbem.com/)-like syntax.
 * [**React Hooks**](https://reactjs.org/docs/hooks-intro.html): useState, useRef.
+
+## Other Implementation
+* [**TodoMVC using Create React App**](https://github.com/hazmi/todomvc-cra), its using almost the exact same component (apart redux and custom router), but using [Create React App](https://github.com/facebook/create-react-app), a React framework from facebook team.
